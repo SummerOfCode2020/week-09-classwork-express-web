@@ -19,8 +19,8 @@ const express = require('express')
 const { response } = require('express')
 const app = express()
 
-app.listen(1337, function () {
-   console.log('app listener started on port 1337 http://localhost:1337/')
+app.listen(3010, function () {
+   console.log('app listener started on port 3010 http://localhost:3010/')
 })
 /**
     2) Use the `get` method to configure a "home page" route handler
@@ -50,3 +50,7 @@ app.listen(1337, function () {
     <https://expressjs.com/en/api.html#res.sendStatus>
 
  */
+
+ app.all('*', function (req, resp) {
+    resp.sendStatus(404)
+ })
