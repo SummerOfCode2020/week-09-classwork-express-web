@@ -16,6 +16,7 @@
 */
 
 const express = require('express')
+const { response } = require('express')
 const app = express()
 
 app.listen(1337, function () {
@@ -24,7 +25,12 @@ app.listen(1337, function () {
 /**
     2) Use the `get` method to configure a "home page" route handler
  */
-
+// app.get is shortcut to 'router'
+// this is like 'switch' or an 'if'
+// we configure express to call our function on match
+ app.get('/', function(req, res) {
+    res.send('Home Page')
+ })
 
  /**
     3) Use the `get` method to configure a "contact" route handler
