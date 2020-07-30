@@ -15,16 +15,29 @@
 
 */
 
+   const {app, router} = require("./common-app")
+const { response } = require("express")
+
+   app.listen(1337, function () {
+      console.log("The app has landed!")
+   })
 
 /**
     2) Use the `get` method to configure a "home page" route handler
  */
 
+   router.route('./testing').get(function (request, response) {
+      response.status(200)
+      response.send('Home Page')
+   })
 
  /**
     3) Use the `get` method to configure a "contact" route handler
  */
 
+   router.route('./contact').get(function (request, response) {
+      response.send('Contacts Page')
+   })
 
  /**
     4) Use the `all` method to configure a default handler for when no other handlers defined earlier in this file have matched the path a user has requested
@@ -36,3 +49,7 @@
     <https://expressjs.com/en/api.html#res.sendStatus>
 
  */
+
+ app.all('*', function(request, response) {
+    response.sendStatus(404)
+ })
