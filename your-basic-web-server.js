@@ -14,12 +14,20 @@
      <https://expressjs.com/en/api.html#app.listen>
 
 */
+const express = require('express')
 
+const app = express()
+
+app.listen(1337)
 
 /**
     2) Use the `get` method to configure a "home page" route handler
  */
+const router = express.Router()
 
+router.route().get(function(request), response){
+   
+}
 
  /**
     3) Use the `get` method to configure a "contact" route handler

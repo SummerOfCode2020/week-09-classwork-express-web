@@ -9,11 +9,14 @@
 
  */
 const express = require('express')
+//'express' app in dependency, assume it's being installed
 
 /** Create an instance of Express */
 const app = express() 
 
 /** create an instance of a `router` to handle requests to urls */
+//all the path names are routing
+
 const router = express.Router()
 
 /** Tell the instance of express to use the `router` you just created */
@@ -21,6 +24,8 @@ app.use(router)
 
 /** Tell express to read and send files directly from this folder */
 app.use(express.static('public'))
+
+//public folder css, images, etc
 
 /**
     Export just the app and router

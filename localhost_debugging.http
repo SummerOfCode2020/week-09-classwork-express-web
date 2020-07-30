@@ -1,0 +1,6 @@
+
+get http://localhost:3001/
+
+### //to seperate multiple requests
+
+get http://localhost:3001/xx

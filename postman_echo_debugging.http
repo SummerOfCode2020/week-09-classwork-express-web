@@ -9,8 +9,8 @@ GET https://postman-echo.com/get?foo1=bar1&foo2=bar2
 ###
 
 POST https://postman-echo.com/post HTTP/1.1
-content-type: application/json
 
+content-type: application/json
 {
     "testing": "123"
 

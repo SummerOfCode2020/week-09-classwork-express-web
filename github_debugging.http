@@ -10,5 +10,5 @@ GET https://github.com/SummerOfCode2020/week-03-tdd-strict-equal/pulls/Se-ven
 
 GET https://api.github.com/repos/SummerOfCode2020/week-03-tdd-strict-equal/pulls
 
-### a 404 example
+### a 404 example, not found, 403 is forbidden
 GET https://github.com/foobarpath
