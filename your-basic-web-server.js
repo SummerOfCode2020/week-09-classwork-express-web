@@ -16,21 +16,26 @@
 */
 // always need: 
 const express = require('express')
+const { router } = require('./common-app')
 const app = express()
 
-app.listen(1337, function() {
+app.listen(1337, function () {
    console.log('App server started on port 1337 http://localhost1337/')
 })
 
 /**
     2) Use the `get` method to configure a "home page" route handler
  */
-
+app.get('/', function (req, res) {
+   res.send('home page')
+ })
 
  /**
     3) Use the `get` method to configure a "contact" route handler
  */
-
+app.get('/contact', function (req, res) {
+   res.send('contact')
+})
 
  /**
     4) Use the `all` method to configure a default handler for when no other handlers defined earlier in this file have matched the path a user has requested
