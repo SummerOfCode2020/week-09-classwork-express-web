@@ -11,17 +11,13 @@
 
 */
 const express = require('express')
-
 const app = express()
-const router = express.Router()
 const port = 1337
+// tell express to use the public folder for the files
+app.use(express.static('./public'))
 
-app.use(router)
 
-app.get('/', function (req, res) {
-   res.send('Hello World')
-})
-
+// this is a higher order function.
 app.listen(port, function () {
    console.log('Hello from port ' + port)
 })
@@ -29,6 +25,10 @@ app.listen(port, function () {
     2) Use the `get` method to configure a "home page" route handler
  */
 
+// app.get('/', function (req, res) {
+//    res.send('index.js')
+// })
+app.get('/', (req, res) => res.send('index.js') )
 
  /**
     3) Use the `get` method to configure a "contact" route handler

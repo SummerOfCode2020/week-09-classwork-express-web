@@ -3,3 +3,8 @@
 GET http://localhost:3001/
 
 
+### 
+// this is the new server I set up. Use `npm run basic` to test.
+GET http://localhost:1337/  
+
+
