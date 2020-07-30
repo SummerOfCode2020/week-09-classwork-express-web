@@ -8,12 +8,12 @@
     https://expressjs.com/
 
  */
-const express = require('express')
+const express = require('express') /** we are importing the express (`npm i --save express`) */
 
 /** Create an instance of Express */
 const app = express() 
 
-/** create an instance of a `router` to handle requests to urls */
+/** create an instance of a `router` (a method) to handle requests to urls */
 const router = express.Router()
 
 /** Tell the instance of express to use the `router` you just created */
