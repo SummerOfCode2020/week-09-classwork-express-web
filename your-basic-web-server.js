@@ -14,13 +14,17 @@ const express = require('express')
 
 const app = express()
 const router = express.Router()
+const port = 1337
 
 app.use(router)
 
-app.listen(1337, function (request, response) {
-   console.log('Sever is running on port 1337')
+app.get('/', function (req, res) {
+   res.send('Hello World')
 })
 
+app.listen(port, function () {
+   console.log('Hello from port ' + port)
+})
 /**
     2) Use the `get` method to configure a "home page" route handler
  */
