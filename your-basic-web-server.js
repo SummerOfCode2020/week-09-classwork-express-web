@@ -29,7 +29,10 @@ app.listen(1337, function () {
 /**
     2) Use the `get` method to configure a "home page" route handler
  */
-
+router.route('/testing').get(function (request, response) {
+   response.status(200)
+   response.send('HOME PAGE')
+})
 
 /**
    3) Use the `get` method to configure a "contact" route handler
