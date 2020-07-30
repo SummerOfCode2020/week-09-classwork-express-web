@@ -15,9 +15,9 @@
 
 */
 
-   const {app, router} = require("./common-app")
-const { response } = require("express")
-
+   const express = require('express')
+   const app = express()
+   
    app.listen(3000, function () {
       console.log("The app has landed!")
    })
@@ -31,16 +31,20 @@ const { response } = require("express")
    //    response.send('Home Page')
    // })
 
-   app.get('./', function (req, res) {
-      response.send('Home Page')
+   app.get('/', function (req, res) {
+      res.send('Home Page')
    })
 
  /**
     3) Use the `get` method to configure a "contact" route handler
  */
 
-   router.route('./contact').get(function (request, response) {
-      response.send('Contacts Page')
+   // router.route('./contact').get(function (request, response) {
+   //    response.send('Contacts Page')
+   // })
+
+   app.get('/contact', function (req, res) {
+      res.send('Contacts')
    })
 
  /**
