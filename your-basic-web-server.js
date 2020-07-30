@@ -7,9 +7,15 @@
     1) directly require and create an instance of express in this file
      
      Use port 1337 for this server instance
+*/
+   const express = require('express')
+   const app = express()
 
+   app.listen(1337, function() {
+      console.log('App server started on port 1337 http://localhost:1337/')
+   })
 
-    Use `listen` to start the server up to handle requests at this port number
+  /*  Use `listen` to start the server up to handle requests at this port number
 
      <https://expressjs.com/en/api.html#app.listen>
 
