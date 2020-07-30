@@ -6,6 +6,10 @@ GET  http://localhost:3001/testing
 
 ###
 
+Get http://localhost:3010/
+
+###
+
 GET http://localhost:3010/contact
 
 ###
