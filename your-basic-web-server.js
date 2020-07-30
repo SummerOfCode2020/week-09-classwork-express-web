@@ -14,6 +14,17 @@
      <https://expressjs.com/en/api.html#app.listen>
 
 */
+// common app 
+const express = require('express')
+const app = express()
+const router = express.Router()
+
+app.use(router)
+app.use(express.static('public'))
+
+app.listen(1337, function () {
+   console.log('App server started on port 1337 http://localhost:1337/')
+})
 
 
 /**
@@ -21,18 +32,18 @@
  */
 
 
- /**
-    3) Use the `get` method to configure a "contact" route handler
- */
+/**
+   3) Use the `get` method to configure a "contact" route handler
+*/
 
 
- /**
-    4) Use the `all` method to configure a default handler for when no other handlers defined earlier in this file have matched the path a user has requested
+/**
+   4) Use the `all` method to configure a default handler for when no other handlers defined earlier in this file have matched the path a user has requested
 
-    For example: User requests localhost:1337/admin or localhost:1337/info
+   For example: User requests localhost:1337/admin or localhost:1337/info
 
-    Use `sendStatus` to 
+   Use `sendStatus` to
 
-    <https://expressjs.com/en/api.html#res.sendStatus>
+   <https://expressjs.com/en/api.html#res.sendStatus>
 
- */
+*/

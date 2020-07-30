@@ -1,4 +1,4 @@
-const {app, router} = require('./common-app.js')
+const { app, router } = require('./common-app.js')
 
 // define the home page route
 router.route('/testing').get(function (request, response) {
@@ -16,11 +16,13 @@ router.route('/about').get(function (request, response) {
   response.send('About Page')
 })
 
+// anytime anything is requested that isn't a match -> this code handles the 404
 app.all('*', function (request, response) {
-  response.sendStatus(404) 
+  response.sendStatus(404)
 })
 
- // http://localhost:3001/
+// we have to start the server up by using a listen method
+// http://localhost:3001/
 app.listen(3001, function () {
-    console.log('App server started on port 3001 http://localhost:3001/')
+  console.log('App server started on port 3001 http://localhost:3001/')
 })
