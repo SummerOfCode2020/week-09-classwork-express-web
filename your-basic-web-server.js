@@ -18,7 +18,9 @@ const express = require('express')
 
 const app = express()
 
-app.listen(1337)
+app.listen(1337, function(){
+   console.log('App server started on port 1337 http://localhost: 1337')
+})
 
 /**
     2) Use the `get` method to configure a "home page" route handler
@@ -26,7 +28,7 @@ app.listen(1337)
 const router = express.Router()
 
 router.route().get(function(request), response){
-   
+
 }
 
  /**
