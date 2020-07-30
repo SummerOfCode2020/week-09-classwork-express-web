@@ -11,8 +11,8 @@
    const express = require('express')
    const app = express()
 
-   app.listen(1337, function() {
-      console.log('App server started on port 1337 http://localhost:1337/')
+   app.listen(3002, function() {
+      console.log('App server started on port 3002 http://localhost:1337/')
    })
 
   /*  Use `listen` to start the server up to handle requests at this port number
@@ -56,3 +56,6 @@ app.get('/contact', function (request, response){
     <https://expressjs.com/en/api.html#res.sendStatus>
 
  */
+   app.all('*', function (request, response) {
+      response.sendStatus(404)
+   })
