@@ -15,15 +15,9 @@
 
 */
 
-const request = require('express')
+const express = require('express')
 
 const app = express()
-
-const router = express.Router()
-
-app.use(router)
-
-app.use(express.static('public'))
 
 
 app.listen(1337, function(){
@@ -32,8 +26,12 @@ app.listen(1337, function(){
 
 /**
     2) Use the `get` method to configure a "home page" route handler
+    how to configure the home page with app.get - use: "/"
  */
 
+app.get('/', function (request, response) {
+   response.send('Home page')
+})
 
  /**
     3) Use the `get` method to configure a "contact" route handler
