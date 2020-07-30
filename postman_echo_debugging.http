@@ -21,6 +21,6 @@ content-type: application/json
 POST https://postman-echo.com/post HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-name=foo
-&password=bar
+name=NLi
+&password=heck
 
