@@ -2,4 +2,7 @@ GET http://localhost:3001/
 
 ###
 
-GET http://localhost:3001/xx
+GET http://localhost:3001/testing
+
+###
+

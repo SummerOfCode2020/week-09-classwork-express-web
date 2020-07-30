@@ -38,8 +38,11 @@ app.listen(1337, function () {
 
 /**
     2) Use the `get` method to configure a "home page" route handler
+    how to configure the home page with app.get - use: "/"
  */
-
+app.get('/homepage', function (request, response) {
+   response.send('Home Page')
+})
 
 /**
    3) Use the `get` method to configure a "contact" route handler
