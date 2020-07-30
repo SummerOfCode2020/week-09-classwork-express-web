@@ -38,7 +38,8 @@ app.get('/contact', function (req, res) {
 })
 
  /**
-    4) Use the `all` method to configure a default handler for when no other handlers defined earlier in this file have matched the path a user has requested
+    4) Use the `all` method to configure a default handler for when no other
+    handlers defined earlier in this file have matched the path a user has requested
 
     For example: User requests localhost:1337/admin or localhost:1337/info
 
@@ -47,3 +48,6 @@ app.get('/contact', function (req, res) {
     <https://expressjs.com/en/api.html#res.sendStatus>
 
  */
+app.all('*', function (req, res) {
+   res.sendStatus(404)
+})
