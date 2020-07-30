@@ -25,7 +25,19 @@
 /**
     2) Use the `get` method to configure a "home page" route handler
  */
+// configure the home page routewith app.get - use: "/"
+/* const router = express.Router()
+app.use(router)
 
+router.route('/testing').get(function (request, response) {
+   response.status(200)
+   response.send('HomePage')
+}) */
+//this is a lot like a 'switch' or an 'if'
+// we configure express to call our function on a match
+app.get('/', function (request, response) {
+        response.send('HomePage')
+})
 
  /**
     3) Use the `get` method to configure a "contact" route handler
