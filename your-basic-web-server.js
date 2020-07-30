@@ -14,7 +14,7 @@
      <https://expressjs.com/en/api.html#app.listen>
 
 */
-// common app 
+/* common app - my solution
 const express = require('express')
 const app = express()
 const router = express.Router()
@@ -25,7 +25,16 @@ app.use(express.static('public'))
 app.listen(1337, function () {
    console.log('App server started on port 1337 http://localhost:1337/')
 })
+*/
+// actual solution presented by JR, all that's needed is declare express, app, and listen
+const express = require('express')
+const app = express()
 
+// app.listen(1337)
+// note: callback is optional
+app.listen(1337, function () {
+   console.log('Running on localhost:1337')
+})
 
 /**
     2) Use the `get` method to configure a "home page" route handler

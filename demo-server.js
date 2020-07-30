@@ -21,7 +21,7 @@ app.all('*', function (request, response) {
   response.sendStatus(404)
 })
 
-// we have to start the server up by using a listen method
+// we have to start the server up by using a listen method .listen(port, optional callback)
 // http://localhost:3001/
 app.listen(3001, function () {
   console.log('App server started on port 3001 http://localhost:3001/')
