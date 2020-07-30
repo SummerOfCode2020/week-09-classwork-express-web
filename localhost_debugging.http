@@ -4,5 +4,14 @@ GET http://localhost:3001/
 
 GET http://localhost:3001/testing
 
-###
+### test the basic server
 
+GET http://localhost:1337
+
+### test contact
+
+GET http://localhost:1337/contact
+
+### test non-defined path; should return 404
+
+GET http://localhost:1337/admin
