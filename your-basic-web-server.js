@@ -18,7 +18,7 @@
    const {app, router} = require("./common-app")
 const { response } = require("express")
 
-   app.listen(1337, function () {
+   app.listen(3000, function () {
       console.log("The app has landed!")
    })
 
@@ -26,8 +26,12 @@ const { response } = require("express")
     2) Use the `get` method to configure a "home page" route handler
  */
 
-   router.route('./testing').get(function (request, response) {
-      response.status(200)
+   // router.route('./testing').get(function (request, response) {
+   //    response.status(200)
+   //    response.send('Home Page')
+   // })
+
+   app.get('./', function (req, res) {
       response.send('Home Page')
    })
 
