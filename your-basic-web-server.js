@@ -50,5 +50,5 @@ app.get('/contact', function (request, response) {
 */
 
 app.all('*', function (request, response) {
-   response.sendStatus(404)
+   response.sendStatus(400)
 })
