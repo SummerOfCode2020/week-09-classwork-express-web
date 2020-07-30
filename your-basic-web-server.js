@@ -14,9 +14,9 @@
      <https://expressjs.com/en/api.html#app.listen>
 
 */
-app.listen(1337, function()) {
+app.listen(1337, function() {
    console.log('App server started on port 1337 http://localhost1337/')
-}
+})
 
 /**
     2) Use the `get` method to configure a "home page" route handler
