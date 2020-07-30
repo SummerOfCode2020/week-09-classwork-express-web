@@ -36,6 +36,9 @@ app.listen(1337, function () {
     3) Use the `get` method to configure a "contact" route handler
  */
 
+ app.get('/contact', function(req, res) {
+    res.send('Contact')
+ })
 
  /**
     4) Use the `all` method to configure a default handler for when no other handlers defined earlier in this file have matched the path a user has requested

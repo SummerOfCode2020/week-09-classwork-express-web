@@ -5,3 +5,6 @@ GET  http://localhost:3001/
 GET  http://localhost:3001/testing
 
 ###
+
+GET http://localhost:1137/
+###
