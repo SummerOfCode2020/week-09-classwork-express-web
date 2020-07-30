@@ -30,8 +30,7 @@ app.listen(1337, function () {
     app.get("/")
  */
 app.get('/', function (request, response) {
-   const user = {}
-   response.send(user)
+   response.send("home page")
 })
 /**
    3) Use the `get` method to configure a "contact" route handler
