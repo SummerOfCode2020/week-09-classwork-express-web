@@ -2,3 +2,5 @@ GET http://localhost:3001/testing
 
 ### These hashtags are necessary, breaks between requests
 
+### test my basic server 
+GET http://localhost:1337/contact

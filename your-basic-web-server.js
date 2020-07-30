@@ -17,8 +17,6 @@
 const express = require('express')
 const app = express()
 
-app.use(express.static('public'))
-
 app.listen(1337, function () {
    console.log('My basic web server is running on port 1337 http://localhost:1337/')
 })
@@ -34,8 +32,11 @@ app.get('/', function (request, response) {
 })
 /**
    3) Use the `get` method to configure a "contact" route handler
+   `/contact`
 */
-
+app.get('/contact', function (request, response) {
+   response.send('Contact Information')
+})
 
 /**
    4) Use the `all` method to configure a default handler for when no other handlers defined earlier in this file have matched the path a user has requested
@@ -47,3 +48,7 @@ app.get('/', function (request, response) {
    <https://expressjs.com/en/api.html#res.sendStatus>
 
 */
+
+app.all('*', function (request, response) {
+   response.sendStatus(404)
+})
